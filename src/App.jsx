@@ -1,9 +1,10 @@
 import './App.css'
+//import libreria
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import HomePage from './components/HomePage'
+import HomePage from './pages/HomePage'
 import DefaultLayout from './layouts/DefaultLayout'
-import AboutPage from './components/AboutPage'
-import Products from './components/Products'
+import AboutPage from './pages/AboutPage'
+import Products from './pages/Products'
 
 function App() {
   return (
@@ -14,8 +15,7 @@ function App() {
             <Route path="/" element={<HomePage/>} />
             <Route path="/about" element={<AboutPage/>} />
             <Route path="/products" element={<Products/>} />
-          </Route>
-          
+          </Route>         
         </Routes>
       </BrowserRouter>
     </>
