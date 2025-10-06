@@ -3,12 +3,16 @@ import ProductCard from "../components/ProductCard";
 
 
 export default function Products() {
-
+    //memorizza i prodotti ricevuti dall'API
     const [products, setProducts] = useState([]);
-    const [filteredProducts, setFilteredProducts] = useState(products)
+    //memorizza la categoria scelta nel <select>
     const [selectedCategory, setSelectedCategory] = useState(null)
+    //stato per memorizzare i prodotti filtrati
+    const [filteredProducts, setFilteredProducts] = useState(products)
+   
 
     console.log(products)
+    //fa richiesta get e salva i dati nello stato products
     function fetchProducts() {
         const endPoint = "https://fakestoreapi.com/products"
         axios.get(endPoint)
@@ -18,10 +22,12 @@ export default function Products() {
             )
     }
 
+    //aggiorna la categoria quando l'utente interagisce col <select>
     const handleSelect = (e) => {
         setSelectedCategory(e.target.value)
     }
 
+    //effetto collaterale (montaggio e cambio dipendenda): chiama i dati (eventualmente filtrati in base alla categoria) 
     useEffect(() => {
         fetchProducts();
         if (selectedCategory) {
@@ -36,6 +42,7 @@ export default function Products() {
     return (
         <>  
         <div className="main-container">
+            {/* Filtri (options = dati API )*/}
             <section className="category-filter">
                     <select name="Categoria" id="Categoria" onChange={handleSelect}>
                         <option value="">Tutte le categorie</option>
@@ -46,9 +53,8 @@ export default function Products() {
                     </select>
                 </section>
                 <section className="products-container">
-                    <div className="select">
-                    </div>
                     <ul>
+                         {/* Scorre i prodotti filtrati e crea le card a cui passa le prop*/}
                         {filteredProducts.map((product) => (
                             <ProductCard
                                 key={product.id}
