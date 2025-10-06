@@ -4,7 +4,7 @@ export default function HomePage() {
             <div className="section-container">
                 <section className="welcome">
                     <h2>Ciò che ami, in un posto</h2>
-                    <img src="./img/ecommerce.jpeg" alt="" />
+                    <img src="../public/img/ecommerce.jpeg" alt="" />
                     <p>Benvenuto su NovaStore, lo spazio dove stile e tecnologia si incontrano per semplificare e arricchire la tua quotidianità.
                         Che tu stia cercando un nuovo look, un accessorio unico o un dispositivo capace di migliorare la tua vita digitale, qui troverai tutto ciò che ami in un solo posto.
 

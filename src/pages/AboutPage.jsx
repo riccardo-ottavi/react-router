@@ -3,7 +3,7 @@ export default function AboutPage() {
         <header>
             <div className="section-container">
                 <h2>La nostra storia</h2>
-                <img src="./img/values.jpg" alt="" />
+                <img src="../public/img/values.jpg" alt="" />
                 <p>NovaStore nasce da un’idea semplice: creare uno spazio digitale dove moda, tecnologia e quotidianità potessero convivere in armonia.
                     Viviamo in un mondo sempre più veloce, in cui le esigenze cambiano di continuo: volevamo un e-commerce capace di unire praticità e ispirazione, senza rinunciare alla qualità e alla bellezza delle piccole cose.
 
