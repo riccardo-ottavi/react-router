@@ -1,10 +1,13 @@
 export default function ProductCard(prop) {
-     const {image} = prop.productProp;
+     const {image, title} = prop.productProp;
     return(
         
 
-        <li><div className="actor-card">
-            <img src={image}></img>
+        <li><div className="product-card">
+            <div className="card-img">
+              <img src={image}></img>  
+            </div>
+            <span>{title}</span>
         </div></li>
     )
 }
