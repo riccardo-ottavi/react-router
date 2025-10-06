@@ -34,24 +34,30 @@ export default function Products() {
     }, [selectedCategory]);
 
     return (
-        <>
-            <section className="products-container">
-                <select name="Categoria" id="Categoria" onChange={handleSelect} className="select">
-                    <option value="">Tutte le categorie</option>
-                    <option value="men's clothing">Men's clothing</option>
-                    <option value="jewelery">Jewelery</option>
-                    <option value="electronics">Electronics</option>
-                    <option value="women's clothing">Women's clothing</option>
-                </select>
-                <ul>
-                    {filteredProducts.map((product) => (
-                        <ProductCard
-                            key={product.id}
-                            productProp={product}
-                        />
-                    ))}
-                </ul>
-            </section>
+        <>  
+        <div className="main-container">
+            <section className="category-filter">
+                    <select name="Categoria" id="Categoria" onChange={handleSelect}>
+                        <option value="">Tutte le categorie</option>
+                        <option value="men's clothing">Men's clothing</option>
+                        <option value="jewelery">Jewelery</option>
+                        <option value="electronics">Electronics</option>
+                        <option value="women's clothing">Women's clothing</option>
+                    </select>
+                </section>
+                <section className="products-container">
+                    <div className="select">
+                    </div>
+                    <ul>
+                        {filteredProducts.map((product) => (
+                            <ProductCard
+                                key={product.id}
+                                productProp={product}
+                            />
+                        ))}
+                    </ul>
+                </section>
+            </div>
         </>
     )
 }
