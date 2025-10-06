@@ -1,10 +1,15 @@
 import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 
 function App() {
-  console.log("provaaa")
   return (
     <>
-      <h1>Prova</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
