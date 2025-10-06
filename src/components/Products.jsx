@@ -1,23 +1,36 @@
+import { useState, useEffect } from "react";
+import ProductCard from "./ProductCard";
 
 
 export default function Products() {
+    const [products, setProducts] = useState([]);
 
-    function fetchProduct() {
+    function fetchProducts() {
         const endPoint = "https://fakestoreapi.com/products"
         axios.get(endPoint)
-            .then((res =>
-                console.log("chiamata riuscita: ", res))
+            .then((res => setProducts(res.data))
+                
             ).catch(error => console.log(error)
             )
     }
+
+    useEffect(() => {
+       fetchProducts(); 
+
+    },[]);
     
-    fetchProduct();
 
     return(
-        <header>
-            <div className="section-title">
-              <h1>Products (Sono il titolo)</h1>  
-            </div>
-        </header>
+        <div className="products-list">
+            <ul>
+                {products.map((product) => (
+                    <ProductCard
+                        key={product.id}
+                        productProp={product}
+                    />
+                ))}
+            </ul>
+        </div>
+
     )
 }
