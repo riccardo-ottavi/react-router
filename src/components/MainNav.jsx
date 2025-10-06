@@ -10,7 +10,7 @@ export default function MainNav(){
         <nav>
             <ul>
                 {links.map(link => (
-                    <li>
+                    <li className="nav-elem">
                         <NavLink to={link.path}>{link.label}</NavLink>
                     </li>
                 ))}

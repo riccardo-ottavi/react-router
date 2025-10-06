@@ -20,7 +20,7 @@ export default function Products() {
 
 
     return (
-        <div className="products-container">
+        <section className="products-container">
             <ul>
                 {products.map((product) => (
                     <ProductCard
@@ -29,7 +29,7 @@ export default function Products() {
                     />
                 ))}
             </ul>
-        </div>
+        </section>
 
     )
 }

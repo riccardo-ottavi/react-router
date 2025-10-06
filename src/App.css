@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 24px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   justify-content: center;  
   position: relative;
 }
@@ -33,7 +33,7 @@ body {
 
 .product-card {
   display: flex;
-  padding: 20px;
+  padding: 10px;
   position: relative;
   background-color: rgb(243, 243, 243);
   margin-bottom: 20px;
@@ -75,7 +75,7 @@ li {
 
 .card-text {
   max-width: 100%;
-  min-height: 550px;
+  min-height: 520px;
   position: relative;
   bottom: 0;
   display: flex;
@@ -118,4 +118,15 @@ h2 {
 nav {
   position: absolute;
   right: 30px;
+}
+
+a {
+  color: rgb(207, 230, 238);
+  text-decoration: none;
+}
+
+.store-logo {
+  font-size: 50px;
+  font-weight: 600;
+  color: rgb(207, 230, 238);
 }
