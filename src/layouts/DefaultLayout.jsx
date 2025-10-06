@@ -6,6 +6,7 @@ export default function DefaultLayout() {
         <>
             <header>
                 <div className="title">
+                    <p className="store-logo">NovaStore</p>
                     <MainNav />
                 </div>
             </header>
