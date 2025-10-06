@@ -1,8 +1,8 @@
-export default function HomePage() {
+export default function AboutPage() {
     return(
         <header>
             <div className="section-title">
-              <h1>HomePage (Sono il titolo)</h1> 
+              <h1>AboutPage (Sono il titolo)</h1>  
             </div>
         </header>
     )
