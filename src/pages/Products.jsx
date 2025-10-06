@@ -31,7 +31,7 @@ export default function Products() {
         } else {
             setFilteredProducts(products)
         }
-    }, [selectedCategory]);
+    }, [selectedCategory, products]);
 
     return (
         <>  
