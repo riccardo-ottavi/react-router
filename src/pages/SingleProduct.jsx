@@ -19,22 +19,26 @@ export default function SingleProduct() {
     return (
         <div>
             {product ? (
-                <Link to={`/products/`}>
+
                 <div>
-                <div className="product-card">
-                    <div className="card-img">
-                        <img src={product.image}></img>
-                    </div>
-                    <div className="card-text">
-                        <h3 className="big-text">{product.title}</h3>
-                        <p className="price-label">{product.price?.toFixed(2)}€</p>
-                        <p>{product.category?.toUpperCase()}</p>
-                        <div className="rating">{product.rating?.rate} <img src="../public/img/star-solid-full.svg"></img> ({product.rating?.count})</div>
-                        <p><strong>DESCRIPTION : </strong>{product.description}</p>
+                    <Link to={`/products/`}>
+                        <button>Torna alla lista</button>
+                    </Link>
+
+                    <div className="product-card">
+                        <div className="card-img">
+                            <img src={product.image}></img>
+                        </div>
+                        <div className="card-text">
+                            <h3 className="big-text">{product.title}</h3>
+                            <span className="price-label">{product.price?.toFixed(2)}€</span>
+                            <span>{product.category?.toUpperCase()}</span>
+                            <div className="rating">{product.rating?.rate} <img src="../public/img/star-solid-full.svg"></img> ({product.rating?.count})</div>
+                            <span><strong>DESCRIPTION : </strong>{product.description}</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            </Link>)
+            )
                 :
                 (<p>Loading</p>)
             }
