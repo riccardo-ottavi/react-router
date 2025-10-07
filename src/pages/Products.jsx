@@ -58,7 +58,7 @@ export default function Products() {
                         {filteredProducts.map((product) => (
                             <ProductCard
                                 key={product.id}
-                                productProp={product}
+                                product={product}
                             />
                         ))}
                     </ul>
