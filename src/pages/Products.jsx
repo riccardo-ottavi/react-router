@@ -11,7 +11,6 @@ export default function Products() {
     const [filteredProducts, setFilteredProducts] = useState(products)
    
 
-    console.log(products)
     //fa richiesta get e salva i dati nello stato products
     function fetchProducts() {
         const endPoint = "https://fakestoreapi.com/products"
