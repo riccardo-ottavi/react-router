@@ -18,7 +18,9 @@ export default function SingleProduct() {
 
     return (
         <div>
-            {product ? (<div>
+            {product ? (
+                <Link to={`/products/`}>
+                <div>
                 <div className="product-card">
                     <div className="card-img">
                         <img src={product.image}></img>
@@ -28,10 +30,11 @@ export default function SingleProduct() {
                         <p className="price-label">{product.price?.toFixed(2)}€</p>
                         <p>{product.category?.toUpperCase()}</p>
                         <div className="rating">{product.rating?.rate} <img src="../public/img/star-solid-full.svg"></img> ({product.rating?.count})</div>
-                        <p>{product.description}</p>
+                        <p><strong>DESCRIPTION : </strong>{product.description}</p>
                     </div>
                 </div>
-            </div>)
+            </div>
+            </Link>)
                 :
                 (<p>Loading</p>)
             }

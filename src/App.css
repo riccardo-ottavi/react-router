@@ -26,10 +26,16 @@ nav {
   right: 30px;
 }
 
-a {
+.title a {
   color: rgb(207, 230, 238);
   text-decoration: none;
 }
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
 
 /*regole header*/
 .title {
@@ -107,7 +113,7 @@ a {
 
 .card-text {
   max-width: 100%;
-  min-height: 520px;
+  min-height: 300px;
   position: relative;
   bottom: 0;
   display: flex;
