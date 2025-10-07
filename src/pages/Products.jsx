@@ -22,7 +22,7 @@ export default function Products() {
             )
     }
 
-    //aggiorna la categoria quando l'utente interagisce col <select>
+    //aggiorna lo stato che salva la categoria quando l'utente interagisce col <select>
     const handleSelect = (e) => {
         setSelectedCategory(e.target.value)
     }
